@@ -23,7 +23,7 @@ const UserTable = ({ users, isQuery }) => {
 
 	const handleClickStrip = useCallback(
 		(index, userName) => {
-			if (active || !selectedUser) {
+			if (active === index || selectedUser.length > 0) {
 				return;
 			}
 			setLoading(true);
